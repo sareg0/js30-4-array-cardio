@@ -70,8 +70,9 @@
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
     const section = document.querySelector('.mw-category')
     const streetList = section.querySelectorAll('a')
-    const streets = [...streetList].map(street => street.textContent)
-    const streetsWithDe = streets.filter(street => street.includes(' de '))
+    const streetsWithDe = [...streetList]
+      .map(street => street.textContent)
+      .filter(street => street.includes(' de '));
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
