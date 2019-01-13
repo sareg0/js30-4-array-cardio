@@ -43,8 +43,7 @@
     // 3. Sort the inventors by birthdate, oldest to youngest
     //sort mutates the original. 
     //creating a copy stops other 'sorts' mutating the result
-    const sortedByBirthYear = [...inventors]
-    sortedByBirthYear.sort((a, b) => b.year - a.year)
+    const sortedByBirthYear = [...inventors].sort((a, b) => b.year - a.year)
     console.table(sortedByBirthYear)
 
     // Array.prototype.reduce()
@@ -56,8 +55,7 @@
     console.log (yearsLived)
 
     // 5. Sort the inventors by years lived
-    const sortedByAge = [...inventors]
-    sortedByAge.sort((a, b) => {
+    const sortedByAge = [...inventors].sort((a, b) => {
       let age1 = a.passed - a.year
       let age2 = b.passed - b.year  
       return age2 > age1
@@ -76,8 +74,7 @@
     // 7. sort Exercise
     //Sort the people alphabetically by last name
     const people = ['Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William', 'Beck, Glenn'];
-    const sortedPeople = [...people]
-    sortedPeople.sort((prevPerson, nextPerson) => { 
+    const sortedPeople = [...people].sort((prevPerson, nextPerson) => {
         const [aLastName, aFirstName] = prevPerson.split(", ")
         const [bLastName, bFirstName] = nextPerson.split(", ")
         return aLastName > bLastName;
